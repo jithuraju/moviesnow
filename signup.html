@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>signup</title>
+  <link rel="stylesheet" href="signup.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+<body>
+<div class="container">
+  <div class="c"><center><h1 style="color: #F4F13F;font-size: 50px;font-weight: 300;"></h1></center></div>
+</div>
+
+<div id="login-box">
+  <div class="left">
+  <form name="form1" action="register.py" method="post" onsubmit="return validatePass()" >
+  <center><h1>Signup</h1></center>
+    <center>
+    <input type="text" name="fname" placeholder="First Name" required>
+    <input type="text" name="lname" placeholder="Last Name" required>
+   
+    <input type="text" name="email" placeholder="E-mail"  required>
+    <input type="text" name="contact" placeholder="Contact"  required>
+    <input type="password" name="pswd" placeholder="Password"  required>
+  <input type="submit" value="submit">
+  <a href="home.html"><input type="button" value=Back></a>
+</center>
+</form>
+</div>
+ <script type="text/javascript">
+function validatePass(){
+
+
+  var x = document.forms["form1"]["fname"].value;
+  if(!x.match(/^[A-Za-z]+$/))
+  {
+    alert("Name cannot include special characters & numbers...");
+    return false;
+
+  }
+  var b = document.forms["form1"]["lname"].value;
+  if(!b.match(/^[A-Za-z]+$/))
+  {
+    alert("Name cannot include special characters & numbers...");
+    return false;
+
+  }
+ 
+  
+
+  
+  var f = document.forms["form1"]["email"].value; 
+  if (!f.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+    {
+      alert("You have entered an invalid email address!")
+      return false;
+    }
+  var z = document.forms["form1"]["contact"].value;
+  if(!z.match(/^[0-9]{10}$/))
+  {
+    alert("invalid phoneno:..");
+    return false;
+  }
+
+  var y = document.forms["form1"]["pswd"].value;
+  if(y.match(/[a-zA-Z0-9@#$*!]{6,}/)){
+    if(y.match(/[@#$%&*!]{1,}/)){
+      if(y.match(/[A-Z]{1,}/)){
+        return true;
+
+      }
+      else
+      {
+        alert("password must include a cap letter....");
+        return false;
+      }
+      return true;
+    }
+    else
+    {
+      alert("password must include special character...");
+      return false;
+    }
+    return true;
+  }
+  else
+  {
+    alert("Invalid password.A password must have atleast 1 cap letter,a special char and min length of 6....");
+    return false;
+  }
+  }
+
+
+  </script>
+ 
+
+</body>
+</html>

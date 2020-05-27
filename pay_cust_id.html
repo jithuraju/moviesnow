@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+<div class="container">
+  <div class="c"><center><h1 style="color: #F4F13F;font-size: 50px;font-weight: 300;"></h1></center></div>
+</div>
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<form action="pay.py" method="post">
+<div id="login-box">
+  <div class="left">
+    <h1></h1>
+   <center></center>
+   
+    <input type="text" name="pid" placeholder="Payment Profile Id" required>
+
+    <input type="text" name="cid" placeholder="Customer Profile id" required>
+ 
+    
+    <input type="submit" name="card_id" value="Pay"/>
+   
+  </div>
+  </form>
+  </center>
+</body>
+</html>

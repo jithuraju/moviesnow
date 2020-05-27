@@ -1,0 +1,41 @@
+<html>
+<head><title>formcard</title>
+<link rel="stylesheet" href="registercard.css">
+  <title>booknow</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="creditCardForm">
+    <div class="heading">
+        <h1>Card Registration</h1>
+    </div>
+    <div class="payment">
+        <form action="payment.py" method="post">
+            <div class="form-group owner">
+                <label for="owner">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" name="cvv">
+            </div>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" name="cardnumber">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <input type="text" class="form-control" name="expdm" placeholder="YYYY-MM">
+            <div class="form-group" id="pay-now">
+                <button type="submit" class="btn btn-default" id="confirm-purchase">Register</button>
+                <a href="home2.html"><button type="Back">Back</button></a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

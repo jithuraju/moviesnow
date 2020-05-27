@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="book.css">
+	<title>booknow</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MoviesNow</a>
+    </div>
+   
+       
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li><a href="home.html"><span class="glyphicon glyphicon-off"></span> Sign out</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-3">
+<center><h1 id="hi">Book Your Show</h1></center>
+</div>
+<center>
+	<form name="book"  action="pay_cust_id.html" method="get" onsubmit="return validation(),validate1(),validate2()">
+	<div class="form-group" id="selection-box">
+  <div class="left">
+  <center>
+   <select class="browser-default custom-select" name="type" required>
+  <option selected>Select Location</option>
+  <option value="1">Kochi</option>
+  <!--	<option>Kasarkod</option>
+        	<option>Kannur</option>
+        	<option>Calicut</option>
+        	<option>Wayanad</option>
+        	<option>Malappuram</option>
+        	<option>Palakkad</option>
+        	<option>Trichur</option>
+        	<option>Kochi</option>
+        	<option>Idukki</option>
+        	<option>Kollam</option>
+        	<option>Trivandrum</option> -->
+        </select><br><br>
+  <select class="browser-default custom-select" name="type1"  required>
+  <option selected>Select Theatre</option>
+  <option value="1">Padma Theatre</option>
+  <option value="2">Kavitha Theatre</option>
+  <option value="3">PVR</option>
+  </select><br><br>
+ <select class="browser-default custom-select" name="type2"  required>
+  <option selected>Show Time</option>
+  <option value="1">11:30pm</option>
+  <option value="2">2:30pm</option>
+  <option value="3">9:30pm</option>
+ </select><br><br>
+ 
+ <input type="number" step="any" min="0"  name="number" value="" placeholder="No of seats" oninput="check(this)" />
+  <input type="submit"value=next>
+ <input type="reset" value=reset>
+ </form>
+</center>
+<script type="text/javascript">
+  function validation()
+  {
+    if(document.book.type.selectedIndex==0){
+      alert("Please select location");
+      document.book.type.focus();
+      return false;
+    }
+    else{
+      return true;
+    }
+}
+  function validate1(){
+    if(document.book.type1.selectedIndex==0){
+      alert("Please select theatre");
+      document.book.type1.focus();
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
+function validate2(){
+    if(document.book.type2.selectedIndex==0){
+      alert("Please select show time");
+      document.book.type2.focus();
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+  function check(input) {
+   if (input.value == 0) {
+     input.setCustomValidity('The number must not be zero.');
+   } else {
+     
+     input.setCustomValidity('');
+   }
+ 
+  }
+  
+
+</script>
+</body>
+</html>
